@@ -37,11 +37,11 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        {/* {showNavbar && lo!=='/login' && <Navbar />} */}
+       
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
-          {/* Add more routes if needed */}
+         
         </Routes>
         <Footer />
       </BrowserRouter>
