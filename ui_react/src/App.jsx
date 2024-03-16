@@ -2,11 +2,11 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import Footer from './assets/Footer';
-import Navbar from './assets/Navbar';
+import AdminDash from './assets/pages/AdminDash';
 import Home from './assets/pages/Home';
 import Login from './assets/pages/Login';
-import Main from './assets/pages/Main';
 import SignUp from './assets/pages/SignUp';
+import UserDash from './assets/pages/UserDash';
 
 const App = () => {
   return (
@@ -16,7 +16,8 @@ const App = () => {
           <Route exact path="/" element={<Home />} />
           <Route exact path="/login" element={<Login />} />
           <Route exact path="/sign" element={<SignUp/>}/>
-          <Route exact path="/main" element={<Main/>}/>
+          <Route exact path="/main" element={<UserDash/>}/>
+          <Route exact path="/adm" element={<AdminDash/>}/>
        </Routes>
         <Footer />
       </BrowserRouter>

@@ -61,16 +61,19 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if email and password are filled
+   
     if (email.trim() !== '' && password.trim() !== '') {
-      // Perform form submission logic
-      console.log('Submitting form...');
-      // Here you can navigate or perform other actions after form submission
+      if (email === 'admin@gmail.com') { 
+        history('/adm');
+      } else {
+       
+        history('/main');
+      }
     } else {
-      // Fields are not filled, prevent navigation or form submission
+    
       console.log('Please fill in both email and password fields.');
     }
-   history('/main');
+   
   };
 
   return (
