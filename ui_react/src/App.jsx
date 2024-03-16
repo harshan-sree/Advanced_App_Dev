@@ -1,35 +1,52 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import React from 'react'
+// import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
+// import Footer from './assets/Footer'
+// import Navbar from './assets/Navbar'
+// import Home from './assets/pages/Home'
 
-function App() {
-  const [count, setCount] = useState(0)
+// import Login from './assets/pages/Login'
 
+
+// const App = () => {
+ 
+//   return (
+//     <>
+//     <BrowserRouter>
+
+//         {location.pathname!=='/login' && <Navbar/>}
+       
+//          <Routes>
+//            <Route exact path="/" element={<Home />} />
+//            <Route exact path="/login" element={<Login />} />
+//            {/* Add more routes if needed */}
+//          </Routes>
+//          <Footer/>
+//     </BrowserRouter>
+//     </>
+//    )
+// }
+// export default App
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
+import Footer from './assets/Footer';
+import Navbar from './assets/Navbar';
+import Home from './assets/pages/Home';
+import Login from './assets/pages/Login';
+
+const App = () => {
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-         {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <BrowserRouter>
+        {/* {showNavbar && lo!=='/login' && <Navbar />} */}
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+          {/* Add more routes if needed */}
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
