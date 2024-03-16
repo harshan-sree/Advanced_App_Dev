@@ -5,6 +5,7 @@ import Footer from './assets/Footer';
 import AdminDash from './assets/pages/AdminDash';
 import Home from './assets/pages/Home';
 import Login from './assets/pages/Login';
+import Profile from './assets/pages/Profile';
 import SignUp from './assets/pages/SignUp';
 import UserDash from './assets/pages/UserDash';
 
@@ -18,6 +19,7 @@ const App = () => {
           <Route exact path="/sign" element={<SignUp/>}/>
           <Route exact path="/main" element={<UserDash/>}/>
           <Route exact path="/adm" element={<AdminDash/>}/>
+          <Route exact path="/profile" element={<Profile/>}/>
        </Routes>
         <Footer />
       </BrowserRouter>
