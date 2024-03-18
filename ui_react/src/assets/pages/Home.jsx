@@ -77,6 +77,12 @@ import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import vid from './yoga.mp4';
 const Home = () => {
+  const scrollToBottom = () => {
+    window.scrollTo({
+      top: document.documentElement.scrollHeight,
+      behavior: 'smooth'
+    });
+  };
   return (
     <div className='bg-black'>
       <Navbar /><br></br>
@@ -90,7 +96,9 @@ const Home = () => {
           <div className="text-white text-center">
             <h1 className="text-4xl font-bold mb-4">Welcome to THE Yoga Academy</h1>
             <p className="text-lg mb-8">Embark on a journey to wellness and self-discovery.</p>
-            <button className="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full font-bold uppercase hover:bg-yellow-400 transition duration-300">Get Started</button>
+            <button onClick={scrollToBottom} className="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full font-bold uppercase hover:bg-yellow-400 transition duration-300">
+              Get Started
+            </button>
           </div>
         </div>
       </div>
@@ -109,17 +117,17 @@ const Home = () => {
               <div className="bg-gray-900 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">Yoga Classes</h3>
                 <p className="mb-4">Find your balance, strength, and inner peace on the mat.</p>
-                <Link to='/class'><button className="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full font-bold uppercase hover:bg-yellow-400 transition duration-300">Explore</button></Link>
+                <Link to='/login'><button className="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full font-bold uppercase hover:bg-yellow-400 transition duration-300">Explore</button></Link>
               </div>
               <div className="bg-gray-900 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">Meditation Sessions</h3>
                 <p className="mb-4">Discover the stillness within, as each breath guides you to a place of serenity.</p>
-                <button className="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full font-bold uppercase hover:bg-yellow-400 transition duration-300">Explore</button>
+                <Link to='/login'><button className="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full font-bold uppercase hover:bg-yellow-400 transition duration-300">Explore</button></Link>
               </div>
               <div className="bg-gray-900 p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-4">Wellness Workshops</h3>
                 <p className="mb-4">Empower yourself with knowledge, nourish your body, and nurture your spirit.</p>
-                <button className="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full font-bold uppercase hover:bg-yellow-400 transition duration-300">Explore</button>
+               <Link to='/login'><button className="bg-yellow-500 text-gray-800 py-2 px-6 rounded-full font-bold uppercase hover:bg-yellow-400 transition duration-300">Explore</button></Link>
               </div>
             </div>
           </section>

@@ -18,7 +18,7 @@ const Profile = () => {
                 <dt className="text-sm font-medium text-gray-500">Email address</dt>
                 <dd className="mt-1 text-sm text-gray-900 sm:col-span-2">johndoe@example.com</dd>
               </div>
-              {/* Add more profile information fields here */}
+              
             </dl>
           </div>
           <div className="px-4 py-4 sm:px-6">
