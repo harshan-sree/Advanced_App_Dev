@@ -32,7 +32,16 @@ const Navbarr = () => {
              Yoga Teacher Training
             </a>
           </li>
-          
+          <li class="flex items-center p-1 font-sans text-sm antialiased font-medium leading-normal gap-x-2 text-blue-gray-900">
+   
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>
+<a href="/profile" class="flex items-center text-white">
+              Account
+            </a>
+</li>
           <li
             class="flex items-center p-1 font-sans text-sm antialiased font-medium leading-normal gap-x-2 text-blue-gray-900">
            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-collection-fill" viewBox="0 0 16 16">
@@ -68,16 +77,8 @@ const Navbarr = () => {
         </svg>
     </a>
 </li>
-     {/* <NavLink to="/login"><button
-          class="hidden px-4 py-2 font-sans text-xs font-bold text-center text-white-900 uppercase align-middle transition-all rounded-lg select-none hover:bg-white-900/10 active:bg-black-900/20 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-          type="button">
-          <span>Log In</span>
-        </button></NavLink> */}
-        {/* <button
-          class="hidden select-none rounded-lg bg-gradient-to-tr from-gray-900 to-white-800 py-2 px-4 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:inline-block"
-          type="button">
-          <span>Sign up</span>
-        </button> */}
+
+    
       </div>
       <button
         class="relative ml-auto h-6 max-h-[40px] w-6 max-w-[40px] select-none rounded-lg text-center align-middle font-sans text-xs font-medium uppercase text-inherit transition-all hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none lg:hidden"
