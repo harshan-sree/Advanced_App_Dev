@@ -1,5 +1,6 @@
 package com.example.yoga.config;
 
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -14,6 +15,7 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import com.example.yoga.constant.Api;
 
+
 import lombok.RequiredArgsConstructor;
 
 @Configuration
@@ -22,6 +24,15 @@ import lombok.RequiredArgsConstructor;
 public class SecurityConfiguration {
     private final JwtAuthenticationFilter jwtAuthFilter;
 	private final AuthenticationProvider authenticationProvider;
+        private static final String[] PublicEndPoints = {
+                "/feedback/**",
+                "/api/v1/entry/**",
+                "/api/v1/userDetails/**",
+                "/swagger-ui/**",
+                "/swagger-ui.html/**",
+                "/api/admin/default",
+                "/v3/api-docs/**"
+};
 
 	@Bean 
 	public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
@@ -32,7 +43,7 @@ public class SecurityConfiguration {
                 .csrf(csrf -> csrf
                         .disable())
                 .authorizeHttpRequests(authorize -> authorize
-                .requestMatchers(Api.ENTRY + "/**","/feedback/**","/swagger-ui/**")
+                .requestMatchers(PublicEndPoints)
                 .permitAll()
                 .anyRequest()
                 .authenticated())
@@ -42,7 +53,6 @@ public class SecurityConfiguration {
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);
 		return httpSecurity.build();
 	}
-	
 	@Bean
     public CorsConfigurationSource corsConfigurationSource() {
             
@@ -55,5 +65,8 @@ public class SecurityConfiguration {
         source.registerCorsConfiguration("/**", configuration);
         
         return source;
+
+        
     }
 }
+

@@ -1,5 +1,6 @@
 package com.example.yoga.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,8 +20,13 @@ public class Yoga {
     @Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String YogaName;
-    private String Instructor;
-    private  String DayAndTime;
+    @Column(name = "yoga_name")
+    private String yogaName;
+
+    @Column(name = "instructor")
+    private String instructor;
+
+    @Column(name = "day_and_time")
+    private String dayAndTime;
 	
 }
