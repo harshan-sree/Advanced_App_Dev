@@ -14,8 +14,6 @@ import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
 import com.example.yoga.constant.Api;
-
-
 import lombok.RequiredArgsConstructor;
 
 @Configuration
